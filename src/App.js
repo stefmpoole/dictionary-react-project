@@ -1,11 +1,15 @@
 import "./App.css";
-import Button from "react-bootstrap/Button";
+
+import Dictionary from "./Dictionary";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
-      <Button className="btn btn-primary">Hello World</Button>
+      <div className="container">
+        <main>
+          <Dictionary />
+        </main>
+      </div>
     </div>
   );
 }
