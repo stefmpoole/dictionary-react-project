@@ -16,7 +16,12 @@ function App() {
           </main>
         </Card>
         <footer className="App-footer">
-          <small>Coded by Stefanie Poole</small>
+          <small>
+            Coded by Stefanie Poole and {""}
+            <a href="https://github.com/stefmpoole/dictionary-react-project">
+              open-sourced on GitHub
+            </a>
+          </small>
         </footer>
       </div>
     </div>
