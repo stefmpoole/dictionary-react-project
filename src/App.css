@@ -1,3 +1,13 @@
 .App {
   text-align: center;
+  margin-top: 40px;
+}
+
+.App-image {
+  height: 200px;
+}
+
+.App-footer {
+  margin: 30px 0;
+  color: blue;
 }
