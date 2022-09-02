@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import axios from "axios";
-import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
 import "./Dictionary.css";
 import Definition from "./Definition";
+import Button from "react-bootstrap/Button";
+import { Book } from "react-bootstrap-icons";
 
 export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
+  let [defintion, setDefinition] = useState(null);
 
   function handleResponse(response) {
     console.log(response.data[0]);
+    setDefinition(response.data[0]);
   }
 
   function search(event) {
@@ -26,17 +29,43 @@ export default function Dictionary() {
 
   return (
     <div className="Dictionary">
-      <Form onSubmit={search}>
-        <InputGroup className="mb-3" onChange={handleKeywordChange}>
-          <Form.Control
-            placeholder="Search"
-            aria-label="Search"
-            aria-describedby="basic-addon2"
-          />
-          <InputGroup.Text id="basic-addon2">Search</InputGroup.Text>
-        </InputGroup>
-        <Definition />
-      </Form>
+      <div className="submitForm">
+        <Form onSubmit={search}>
+          <Form.Group className="form-outline pt-1 mb-4" id="location-form">
+            <div className="input-group">
+              <input
+                type="search"
+                className="form-control rounded"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="basic-addon2"
+                autoComplete="off"
+                autoFocus="on"
+                id="search-text-input"
+                onChange={handleKeywordChange}
+              />
+              <div className="input-group-append">
+                <Button
+                  className="rounded ml-1"
+                  style={{
+                    color: "white",
+                    backgroundColor: "#eb6e4beb",
+                    borderColor: "white",
+                    margin: 1,
+                  }}
+                  type="Submit"
+                  id="search-button"
+                  value="search"
+                  onChange={handleKeywordChange}
+                >
+                  <Book />
+                </Button>
+              </div>
+            </div>
+          </Form.Group>
+          <Definition data={defintion} />
+        </Form>
+      </div>
     </div>
   );
 }
