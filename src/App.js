@@ -8,14 +8,19 @@ function App() {
     <div className="App">
       <div className="container">
         <h1 className="mb-3">Dictionary</h1>
-        <Card>
-          <Card.Title style={{ marginTop: 10, fontSize: 18 }}>
+
+        <Card className="rounded">
+          <Card.Title
+            className="text-white"
+            style={{ marginTop: 10, fontSize: 18 }}
+          >
             What word do you want to look up?
           </Card.Title>
           <main>
             <Dictionary />
           </main>
         </Card>
+
         <footer className="App-footer">
           <small>
             Coded by Stefanie Poole and is {""}

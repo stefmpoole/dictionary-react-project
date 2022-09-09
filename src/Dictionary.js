@@ -29,9 +29,9 @@ export default function Dictionary() {
 
   return (
     <div className="Dictionary">
-      <div className="submitForm">
+      <div className="submitForm mb-3">
         <Form onSubmit={search}>
-          <Form.Group className="form-outline pt-1 mb-1" id="location-form">
+          <Form.Group className="form-outline pt-1 mb-2" id="location-form">
             <div className="input-group">
               <input
                 type="search"

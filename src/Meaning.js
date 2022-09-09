@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 export default function Meaning(props) {
   return (
     <div>
-      <Card className="mt-3 mb-3">
+      <Card className="mt-2 mb-2">
         <Card.Header className="text-uppercase">
           <strong>{props.definition.partOfSpeech}</strong>
         </Card.Header>
@@ -17,15 +17,10 @@ export default function Meaning(props) {
                   {define.definition}
                   <br />
                   <br />
-                  <strong>Example:</strong>
-                  <br />
                   <em>{define.example}</em>
                   <br />
                   <br />
-                  <strong>Synonyms:</strong>
-                  <br />
                   <Synonyms synonyms={define.synonyms} />
-                  <br />
                 </span>
               );
             } else {

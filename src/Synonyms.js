@@ -4,11 +4,11 @@ import ListGroup from "react-bootstrap/ListGroup";
 export default function Synonyms(props) {
   if (props.synonyms) {
     return (
-      <ul className="Synonyms text-capitalize font-weight-light my-2 list-style: none pl-0">
+      <ul className="Synonyms text-capitalize my-2 list-style: none pl-0">
         {props.synonyms.map(function (synonym, index) {
           return (
             <ListGroup variant="flush" key={index}>
-              {synonym}
+              similar : {synonym}
             </ListGroup>
           );
         })}

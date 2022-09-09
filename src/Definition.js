@@ -11,8 +11,8 @@ export default function Definition(props) {
           {props.data.phonetics.map(function (phonetics, index) {
             if (index < 1) {
               return (
-                <Card border="0 mt-1 mb-0 pb-0" key={index}>
-                  <h3 className="mt-2 mb-0 pb-0 text-capitalize">
+                <Card className="0 mt-1 mb-0 pb-0" key={index}>
+                  <h3 className="mt-1 mb-0 pb-0 text-capitalize">
                     {props.data.word}
                   </h3>
                   <Phonetics phonetics={phonetics} />
