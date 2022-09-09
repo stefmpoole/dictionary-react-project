@@ -15,6 +15,8 @@ export default function Definition(props) {
                   <Phonetics phonetics={phonetics} />
                 </div>
               );
+            } else {
+              return null;
             }
           })}
         </h2>

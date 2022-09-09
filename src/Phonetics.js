@@ -13,6 +13,7 @@ export default function Phonetics(props) {
         <a
           href={props.phonetics.audio}
           target="_blank"
+          rel="noreferrer"
           style={{ color: "#eb6e4beb", fontSize: 30 }}
         >
           <VolumeUpFill />
