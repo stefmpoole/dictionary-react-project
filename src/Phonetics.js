@@ -19,7 +19,6 @@ export default function Phonetics(props) {
           <VolumeUpFill />
         </a>
       </Button>
-
       {props.phonetics.text}
     </div>
   );
