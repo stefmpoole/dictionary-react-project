@@ -7,10 +7,11 @@ function App() {
   return (
     <div className="App">
       <div className="container">
+        <h1 className="mb-3">Dictionary</h1>
         <Card>
-          <Card.Header style={{ margin: 20 }}>
-            <Card.Title>Dictionary</Card.Title>
-          </Card.Header>
+          <Card.Title style={{ marginTop: 10, fontSize: 18 }}>
+            What word do you want to look up?
+          </Card.Title>
           <main>
             <Dictionary />
           </main>

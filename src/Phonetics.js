@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 
 export default function Phonetics(props) {
   return (
-    <div className="Phonetics">
+    <span className="mr-2">
       <Button
         className="rounded-circle pt-0 pl-2 pr-2 pb-1 mr-0 mb-1"
         variant="outline-light"
@@ -14,12 +14,12 @@ export default function Phonetics(props) {
           href={props.phonetics.audio}
           target="_blank"
           rel="noreferrer"
-          style={{ color: "#eb6e4beb", fontSize: 30 }}
+          style={{ color: "#eb6e4beb", fontSize: 30, margin: 3 }}
         >
           <VolumeUpFill />
         </a>
       </Button>
       {props.phonetics.text}
-    </div>
+    </span>
   );
 }

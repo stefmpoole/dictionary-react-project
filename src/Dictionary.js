@@ -31,7 +31,7 @@ export default function Dictionary() {
     <div className="Dictionary">
       <div className="submitForm">
         <Form onSubmit={search}>
-          <Form.Group className="form-outline pt-1 mb-4" id="location-form">
+          <Form.Group className="form-outline pt-1 mb-1" id="location-form">
             <div className="input-group">
               <input
                 type="search"
@@ -46,7 +46,7 @@ export default function Dictionary() {
               />
               <div className="input-group-append">
                 <Button
-                  className="rounded ml-1"
+                  className="rounded ml-2"
                   style={{
                     color: "white",
                     backgroundColor: "#eb6e4beb",
