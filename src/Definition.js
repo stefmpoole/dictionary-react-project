@@ -1,5 +1,6 @@
 import React from "react";
 import Meaning from "./Meaning.js";
+import Phonetics from "./Phonetics";
 
 export default function Definition(props) {
   if (props.data) {
@@ -7,7 +8,15 @@ export default function Definition(props) {
       <div className="Definition justify-center mt-2 pt-0">
         <h2 id="current-word">
           {props.data.word}
-          <p>{props.data.phonetic}</p>
+          {props.data.phonetics.map(function (phonetics, index) {
+            if (index < 1) {
+              return (
+                <div key={index}>
+                  <Phonetics phonetics={phonetics} />
+                </div>
+              );
+            }
+          })}
         </h2>
         {props.data.meanings.map(function (definition, index) {
           return (
