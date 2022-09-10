@@ -11,7 +11,7 @@ function App() {
 
         <Card className="rounded">
           <Card.Title
-            className="text-white"
+            className="font-weight-normal"
             style={{ marginTop: 10, fontSize: 18 }}
           >
             What word do you want to look up?
