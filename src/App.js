@@ -8,7 +8,10 @@ function App() {
     <div className="App">
       <div className="container">
         <h1 className="mb-3">Dictionary</h1>
-        <Card className="rounded pl-3 pr-3">
+        <Card
+          className="rounded pl-3 pr-3 pb-2 pt-2"
+          style={{ borderColor: "white" }}
+        >
           <Card.Title
             className="font-weight-normal"
             style={{ marginTop: 10, fontSize: 18 }}

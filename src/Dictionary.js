@@ -5,21 +5,32 @@ import "./Dictionary.css";
 import Definition from "./Definition";
 import Button from "react-bootstrap/Button";
 import { Book } from "react-bootstrap-icons";
+import Photos from "./Photos";
 
 export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [defintion, setDefinition] = useState(null);
   let [loaded, setLoaded] = useState(false);
+  let [photos, setPhotos] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data[0]);
     setDefinition(response.data[0]);
+  }
+
+  function handlePexelsResponse(response) {
+    setPhotos(response.data.photos);
   }
 
   function search() {
     // documentation: https://dictionaryapi.dev/
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
+
+    const pexelsApiKey =
+      "563492ad6f9170000100000171b244f108514ee89b85692e1cc7fddf";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
   }
 
   function handleSubmit(event) {
@@ -76,6 +87,7 @@ export default function Dictionary(props) {
             <Definition data={defintion} />
           </Form>
         </div>
+        <Photos photos={photos} />
       </div>
     );
   } else {
