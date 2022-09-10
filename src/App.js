@@ -8,8 +8,7 @@ function App() {
     <div className="App">
       <div className="container">
         <h1 className="mb-3">Dictionary</h1>
-
-        <Card className="rounded">
+        <Card className="rounded pl-3 pr-3">
           <Card.Title
             className="font-weight-normal"
             style={{ marginTop: 10, fontSize: 18 }}
@@ -17,10 +16,9 @@ function App() {
             What word do you want to look up?
           </Card.Title>
           <main>
-            <Dictionary />
+            <Dictionary defaultKeyword="dictionary" />
           </main>
         </Card>
-
         <footer className="App-footer">
           <small>
             Coded by Stefanie Poole and is {""}
