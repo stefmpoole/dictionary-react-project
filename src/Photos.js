@@ -7,7 +7,7 @@ export default function Photos(props) {
   console.log(props.photos);
   if (props.photos) {
     return (
-      <Card className="mt-2 mb-2">
+      <Card className="mt-2 mb-2 pb-3">
         <Card.Header className="text-uppercase mb-3">
           <strong>Images</strong>
         </Card.Header>

@@ -57,8 +57,8 @@ export default function Dictionary(props) {
                 <input
                   type="search"
                   className="form-control rounded"
-                  placeholder="Dictionary"
-                  aria-label="Dictionary"
+                  placeholder="Which word would you like to look up?"
+                  aria-label="Which word would you like to look up?"
                   aria-describedby="basic-addon2"
                   autoComplete="off"
                   autoFocus="on"
