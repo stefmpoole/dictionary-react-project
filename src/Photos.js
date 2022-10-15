@@ -15,14 +15,19 @@ export default function Photos(props) {
           <CardGroup
             className="rounded"
             style={{
-              display: "-webkit-inline-flex",
-              WebkitJustifyContent: "center",
+              display: "flex",
+              justifyContent: "center",
               marginTop: 2,
             }}
           >
             {props.photos.map(function (photo, index) {
               return (
-                <div className="col-sm-3" key={index} style={{ margin: 2 }}>
+                <div
+                  className="col-sm-3"
+                  id="images"
+                  key={index}
+                  style={{ margin: 2 }}
+                >
                   <a href={photo.src.original} target="_blank" rel="noreferrer">
                     <img
                       className="card-img-top rounded img-fluid"

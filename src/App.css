@@ -2,9 +2,14 @@ body {
   background-color: black;
 }
 
+#card {
+  background-color: black;
+  border: none;
+}
+
 .App {
   text-align: center;
-  margin-top: 75px;
+  margin-top: 45px;
 }
 
 .App-footer {
